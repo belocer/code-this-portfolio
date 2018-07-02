@@ -1,0 +1,33 @@
+section {
+  width: 100%;
+}
+
+.relation {
+  position: relative;
+}
+
+.relation__offset {
+  height: 0;
+}
+
+.relation__offset-1-1 {
+  padding-top: 100%;
+}
+
+.relation__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  padding: 15px;
+  margin: 3rem auto;
+  max-width: 630px;
+}
+
+.row {
+  //border: 1px solid #000;
+}

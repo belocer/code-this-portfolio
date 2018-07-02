@@ -1,0 +1,35 @@
+.contact__screen {
+  background: radial-gradient(rgb(58, 148, 100), rgb(30, 42, 65));
+
+  .wrapper {
+    max-width: 385px;
+
+    .contact {
+      margin: 0 auto;
+
+      span {
+        display: block;
+        color: #fff;
+        text-shadow: $tx-sh;
+
+        i {
+          font-size: 1.5rem;
+        }
+
+        a {
+          padding-left: 1rem;
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.1rem;
+          text-indent: 2rem;
+          @include ff-exo();
+          word-spacing: 1px;
+        }
+      }
+
+      iframe {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

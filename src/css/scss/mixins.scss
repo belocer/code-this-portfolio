@@ -1,0 +1,46 @@
+/* шрифт без засечек */
+@mixin ff-exo() {
+  font-family: 'Exo 2', sans-serif;
+}
+@mixin ff-lora() {
+  font-family: 'Lora', serif;
+}
+
+/* изображение на bg */
+@mixin bg__img_first($link) {
+  background: url($link) center center/cover no-repeat no-repeat;
+  background-size: cover;
+}
+
+/* анимация для вращения */
+@mixin rotate($start, $end) {
+  transform-origin: 50%;
+  @keyframes ani {
+    0% {
+      transform: rotate($start);
+    }
+    50% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate($end);
+    }
+  }
+}
+
+@mixin rotateB() {
+  transform-origin: 50%;
+  @keyframes ani1 {
+    0% {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+
+    59% {
+      transform: rotate3d(2500, 1700, 1308, 360deg);
+    }
+
+    100% {
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "fp_custom.scss";
+@import "fonts.scss";
+@import "vars.scss";
+@import "mixins.scss";
+@import "smart-grid.scss";
+@import "proportions.scss";
+
+html, body {
+  @include reset();
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+@import "firstScreen.scss";
+@import "menu.scss";
+@import "works.scss";
+@import "about.scss";
+@import "contact.scss";
