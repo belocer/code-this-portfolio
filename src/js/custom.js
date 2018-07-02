@@ -57,7 +57,7 @@ $(document).ready(function () {
                 });
             }
         },
-        afterRender: function(){
+        afterRender: function () {
             /******************************************************************/
             /* Анимация SVG кругов */
 
@@ -105,18 +105,23 @@ $(document).ready(function () {
                 let twoCircle = document.querySelector(".circles .circle-44");
                 let threeCircle = document.querySelector(".circles .circle-47");
 
-                aggregate(oneCircle, 217, 18);
-                aggregate(twoCircle, 132, 30);
-                aggregate(threeCircle, 157, 50);
+                aggregate(oneCircle, 200, 18);
+                aggregate(twoCircle, 127, 34);
+                aggregate(threeCircle, 130, 59);
 
                 function aggregate(el, stopNum, speed) {
+
+                    if (timerId) {
+                        clearInterval(timerId);
+                    }
+
                     let timerId = setInterval(function () {
 
                         let styleArr = getComputedStyle(el);
                         let firstVal = styleArr.strokeDasharray.split(" ");
                         firstVal[0] = firstVal[0].substring(0, firstVal[0].length - 3);
                         el.style.strokeDasharray = Math.floor(firstVal[0]) + 1 + ", 282.6";
-
+console.log(stopNum);
                         if (el.style.strokeDasharray == stopNum + ", 282.6") {
                             clearInterval(timerId);
                         }

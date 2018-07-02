@@ -107,6 +107,7 @@ gulp.task("htmlo", () => {
 // Оптимизация JS файлов
 gulp.task("jso", () => {
     return gulp.src(config.src + config.js.src)
+        .pipe(sourcemaps.init())
         .pipe(babel({                               // Транспилятор es6 в es5
             presets: ["env"]
         }))
@@ -115,6 +116,7 @@ gulp.task("jso", () => {
         .pipe(rename({			                    // Переименование js файлов
             suffix: ".min"
         }))
+        .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(config.dist + "/js/"))
         .pipe(bs.reload({
             stream: true
