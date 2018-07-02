@@ -121,7 +121,7 @@ $(document).ready(function () {
                         let firstVal = styleArr.strokeDasharray.split(" ");
                         firstVal[0] = firstVal[0].substring(0, firstVal[0].length - 3);
                         el.style.strokeDasharray = Math.floor(firstVal[0]) + 1 + ", 282.6";
-console.log(stopNum);
+                        
                         if (el.style.strokeDasharray == stopNum + ", 282.6") {
                             clearInterval(timerId);
                         }
