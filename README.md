@@ -2,4 +2,4 @@
 <br>
 This is the code for my portfolio based on `fullpages.js`
 <br>
-_I will be glad to work with you._
+_I will be glad to work with you!_
